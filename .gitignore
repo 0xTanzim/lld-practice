@@ -1,0 +1,57 @@
+# --- Build artifacts (C/C++) ---
+*.o
+*.obj
+*.os
+*.out
+*.exe
+*.app
+*.so
+*.so.*
+*.dylib
+*.a
+*.lib
+*.lo
+*.la
+a.out
+
+# Compiled binaries without extension
+tomato/main
+tomato/tomato
+document-editor/main
+
+# Runtime output
+document.txt
+
+# Debug symbols
+*.dSYM/
+*.pdb
+*.ilk
+
+# --- Dependency / build dirs ---
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+.cache/
+
+# --- IDE / editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.cproject
+.settings/
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Logs / temp ---
+*.log
+*.tmp
+*.bak
