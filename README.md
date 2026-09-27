@@ -1,6 +1,6 @@
-# LLD — Low-Level Design
+# lld-practice
 
-Practice repository for low-level design (LLD) exercises — SOLID principles, design patterns, and class-level architecture.
+Hands-on low-level design (LLD) practice in modern **C++26** — SOLID principles, design patterns, and class-level architecture.
 
 Each project is a self-contained design problem with its own README, build instructions, and structure.
 
@@ -10,9 +10,10 @@ Each project is a self-contained design problem with its own README, build instr
 
 | # | Project | Problem | Language | Status |
 |---|---------|---------|----------|--------|
-| 1 | [`tomato/`](tomato/) | Online food ordering system | C++17 | ✅ Done |
-| 2 | [`document-editor/`](document-editor/) | Composite document renderer with pluggable persistence | C++17 | ✅ Done |
-| — | _project-name/_ | _one-line problem statement_ | _C++17_ | 🔜 Planned |
+| 1 | [`tomato/`](tomato/) | Online food ordering system | C++26 | ✅ Done |
+| 2 | [`document-editor/`](document-editor/) | Composite document renderer with pluggable persistence | C++26 | ✅ Done |
+| 3 | [`notification-system/`](notification-system/) | Decorator + Observer + Strategy notification pipeline | C++26 | ✅ Done |
+| — | _project-name/_ | _one-line problem statement_ | _C++26_ | 🔜 Planned |
 
 ---
 
@@ -61,7 +62,7 @@ lld/
 ## Quick Start
 
 ```bash
-git clone <repo-url> && cd lld
+git clone https://github.com/<your-username>/lld-practice.git && cd lld-practice
 # Pick a project, then follow its README:
 ls
 ```

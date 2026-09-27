@@ -63,7 +63,7 @@ tomato/
 ## Build & Run
 
 ```bash
-g++ -std=c++17 -Wall -o tomato main.cpp
+g++ -std=c++26 -Wall -o tomato main.cpp
 ./tomato
 ```
 

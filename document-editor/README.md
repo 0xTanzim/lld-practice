@@ -36,7 +36,7 @@ document-editor/
 ## Build & Run
 
 ```bash
-g++ -std=c++17 -Wall -o main main.cpp
+g++ -std=c++26 -Wall -o main main.cpp
 ./main
 ```
 

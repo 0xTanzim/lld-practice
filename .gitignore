@@ -18,6 +18,7 @@ a.out
 tomato/main
 tomato/tomato
 document-editor/main
+notification-system/main
 
 # Runtime output
 document.txt
