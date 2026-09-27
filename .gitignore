@@ -23,6 +23,12 @@ notification-system/main
 # Runtime output
 document.txt
 
+# Pattern lab: keep only sources/docs, ignore binaries at any depth
+pattern-lab/**
+!pattern-lab/**/
+!pattern-lab/**/*.cpp
+!pattern-lab/**/*.md
+
 # Debug symbols
 *.dSYM/
 *.pdb

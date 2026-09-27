@@ -1,68 +1,66 @@
 # lld-practice
 
-Hands-on low-level design (LLD) practice in modern **C++26** — SOLID principles, design patterns, and class-level architecture.
+Hands-on **Low-Level Design** practice in C++26 — one design problem at a time. Modular code, design patterns, SOLID principles.
 
-Each project is a self-contained design problem with its own README, build instructions, and structure.
-
----
+> **New project** → new folder + own `README.md` + one row in [Projects](#projects).
+> **Learning a pattern** → drop one file in [`pattern-lab/`](pattern-lab/README.md).
 
 ## Projects
 
-| # | Project | Problem | Language | Status |
+| # | Project | Problem | Patterns | Status |
 |---|---------|---------|----------|--------|
-| 1 | [`tomato/`](tomato/) | Online food ordering system | C++26 | ✅ Done |
-| 2 | [`document-editor/`](document-editor/) | Composite document renderer with pluggable persistence | C++26 | ✅ Done |
-| 3 | [`notification-system/`](notification-system/) | Decorator + Observer + Strategy notification pipeline | C++26 | ✅ Done |
-| — | _project-name/_ | _one-line problem statement_ | _C++26_ | 🔜 Planned |
+| 1 | [`tomato/`](tomato/) | Online food ordering system | Strategy, Abstract Factory, Singleton, Facade | ✅ Done |
+| 2 | [`document-editor/`](document-editor/) | Document rendering + persistence | Composite, Strategy, Facade | ✅ Done |
+| 3 | [`notification-system/`](notification-system/) | Notification pipeline | Decorator, Observer, Strategy, Singleton | ✅ Done |
 
----
+## Pattern Lab
 
-## Adding a New Project
+Single-pattern scratchpad, grouped by GoF category — grows with every pattern learned.
 
-1. Create folder: `lld/<project-name>/`
-2. Add `<project-name>/README.md` — problem statement, patterns used, build & run
-3. Add one row to the [Projects](#projects) table
-4. Follow repo [Conventions](#conventions) below
+| Category | Learned |
+|---|---|
+| Behavioral | [Command](pattern-lab/behavioral/command.cpp) |
+| Creational | — |
+| Structural | — |
 
-Done. Root README never needs tomato-specific or project-specific details — those live in each project's own README.
+Full index: [`pattern-lab/README.md`](pattern-lab/README.md)
 
----
-
-## Repository Layout
+## Layout
 
 ```
-lld/
-├── README.md            # This file — generic project index
-├── .gitignore           # Shared across all projects
-│
-├── <project-a>/         # Self-contained: own README + build
-├── <project-b>/
-└── ...
+lld-practice/
+├── tomato/                # Full project — own README + build
+├── document-editor/
+├── notification-system/
+├── pattern-lab/           # One-pattern experiments by GoF category
+│   ├── behavioral/
+│   ├── creational/
+│   └── structural/
+├── README.md              # Index — you are here
+└── .gitignore             # Shared rules
 ```
 
----
+Each project is self-contained: own `README.md`, own build instructions. Details live there — this file stays an index.
 
 ## Conventions
 
-**Structure**
-- Every project self-contained: own `README.md`, own build instructions
-- Root README = index only, project README = details
-- Group code by layer/feature (`models/`, `services/`, `strategies/`, `factories/`, `utils/`, ...)
-- Shared ignore rules live only in root `.gitignore`
-
-**Code**
+- **C++26** — `g++ -std=c++26 -Wall`
 - No verbose WHAT-comments — code reads as documentation
-- No hardcoded magic values — externalize to constants/config
-- Fail fast, explicit error handling, no silent failures
-- SOLID, composition over inheritance, small focused units
-- Group by feature/domain — no flat dumps
+- No magic values — constants centralized
+- Fail fast, explicit errors, no silent failures
+- SOLID, composition over inheritance
+- Code grouped by layer/feature (`models/`, `strategies/`, `observers/`, ...)
 
----
-
-## Quick Start
+## Getting Started
 
 ```bash
-git clone https://github.com/<your-username>/lld-practice.git && cd lld-practice
-# Pick a project, then follow its README:
-ls
+git clone https://github.com/<your-username>/lld-practice.git
+cd lld-practice
+```
+
+Then follow any project's README, e.g.:
+
+```bash
+cd notification-system
+g++ -std=c++26 -Wall -o main main.cpp && ./main
 ```
