@@ -12,6 +12,10 @@ public:
     BluetoothSpeakerAdapter(BluetoothSpeakerAPI* api) {
         bluetoothApi = api;
     }
+
+    ~BluetoothSpeakerAdapter() override {
+        delete bluetoothApi;
+    }
     
     void playAudio(Song* song) override {
         string payload = song->getTitle() + " by " + song->getArtist();

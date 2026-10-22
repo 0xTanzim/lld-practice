@@ -13,6 +13,10 @@ public:
         wiredApi = api;
     }
 
+    ~WiredSpeakerAdapter() override {
+        delete wiredApi;
+    }
+
     void playAudio(Song* song) override {
         string payload = song->getTitle() + " by " + song->getArtist();
         wiredApi->playSoundViaCable(payload);

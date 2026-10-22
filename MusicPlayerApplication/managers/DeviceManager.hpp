@@ -20,6 +20,10 @@ public:
         }
         return instance;
     }
+    ~DeviceManager() {
+        delete currentOutputDevice;
+    }
+
     void connect(DeviceType deviceType) {
         if (currentOutputDevice) {
             delete currentOutputDevice;

@@ -25,6 +25,10 @@ private:
     }
 
 public:
+    ~MusicPlayerFacade() {
+        delete audioEngine;
+    }
+
     static MusicPlayerFacade* getInstance() {
         if (!instance) {
             instance = new MusicPlayerFacade();

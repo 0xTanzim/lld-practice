@@ -26,6 +26,9 @@ private:
         if (currentPlaylist->getSize() == 0) {
             throw runtime_error("Playlist is empty.");
         }
+        if (currentIndex <= 0) {
+            throw runtime_error("No previous song available.");
+        }
         currentIndex = currentIndex - 1;
         return currentPlaylist->getSongs()[currentIndex];
     }
@@ -48,7 +51,7 @@ public:
     }
 
     bool hasNext() override {
-        return ((currentIndex + 1) < currentPlaylist->getSize());
+        return (currentPlaylist && (currentIndex + 1) < currentPlaylist->getSize());
     }
 
     Song* next() override {
@@ -56,28 +59,27 @@ public:
             throw runtime_error("No playlist loaded or playlist is empty.");
         }
 
-        if (!nextQueue.empty()) {
-            Song* s = nextQueue.front();
-            nextQueue.pop();
-            prevStack.push(s);
-
-            // update index to match queued song
-            auto& list = currentPlaylist->getSongs();
-            for (int i = 0; i < (int)list.size(); ++i) {
-                if (list[i] == s) {
-                    currentIndex = i;
-                    break;
-                }
-            }
-            return s;
+        if (nextQueue.empty()) {
+            // Queued songs jump the line; fall through to sequential order.
+            return nextSequential();
         }
 
-        // Otherwise sequential
-        return nextSequential();
+        Song* s = nextQueue.front();
+        nextQueue.pop();
+        prevStack.push(s);
+
+        auto& list = currentPlaylist->getSongs();
+        for (int i = 0; i < (int)list.size(); ++i) {
+            if (list[i] == s) {
+                currentIndex = i;
+                break;
+            }
+        }
+        return s;
     }
 
     bool hasPrevious() override {
-        return (currentIndex - 1 > 0);
+        return currentIndex > 0;
     }
 
     Song* previous() override {
@@ -89,7 +91,6 @@ public:
             Song* s = prevStack.top();
             prevStack.pop();
 
-            // update index to match stacked song
             auto& list = currentPlaylist->getSongs();
             for (int i = 0; i < (int)list.size(); ++i) {
                 if (list[i] == s) {
@@ -100,7 +101,6 @@ public:
             return s;
         }
 
-        // Otherwise sequential
         return previousSequential();
     }
 

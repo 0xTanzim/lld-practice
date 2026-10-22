@@ -20,11 +20,15 @@ public:
         currentIndex = -1;
     }
 
-    bool hasNext() override {
-        return ((currentIndex + 1) < currentPlaylist->getSize());
+    void addToNext(Song* song) override {
+        (void)song;
+        throw logic_error("Queuing next is not supported by sequential playback.");
     }
 
-    // Next in Loop
+    bool hasNext() override {
+        return (currentPlaylist && (currentIndex + 1) < currentPlaylist->getSize());
+    }
+
     Song* next() override {
         if (!currentPlaylist || currentPlaylist->getSize() == 0) {
             throw runtime_error("No playlist loaded or playlist is empty.");
@@ -34,13 +38,15 @@ public:
     }
 
     bool hasPrevious() override {
-        return (currentIndex - 1 > 0);
+        return currentIndex > 0;
     }
 
-    // previous in Loop
     Song* previous() override {
         if (!currentPlaylist || currentPlaylist->getSize() == 0) {
             throw runtime_error("No playlist loaded or playlist is empty.");
+        }
+        if (currentIndex <= 0) {
+            throw runtime_error("No previous song available.");
         }
         currentIndex = currentIndex - 1;
         return currentPlaylist->getSongs()[currentIndex];

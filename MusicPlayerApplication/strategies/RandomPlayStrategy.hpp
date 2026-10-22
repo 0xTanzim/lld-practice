@@ -30,7 +30,11 @@ public:
         return currentPlaylist && !remainingSongs.empty();
     }
 
-    // Next in Loop
+    void addToNext(Song* song) override {
+        (void)song;
+        throw logic_error("Queuing next is not supported by random playback.");
+    }
+
     Song* next() override {
         if (!currentPlaylist || currentPlaylist->getSize() == 0) {
             throw runtime_error("No playlist loaded or playlist is empty.");
@@ -42,7 +46,7 @@ public:
         int idx = rand() % remainingSongs.size();
         Song* selectedSong = remainingSongs[idx];
 
-        // Remove the selectedSong from the list. (Swap and pop to remove in O(1))
+        // Swap-and-pop keeps removal O(1) vs erase-shift O(n).
         swap(remainingSongs[idx], remainingSongs.back());
         remainingSongs.pop_back();
 
@@ -51,7 +55,7 @@ public:
     }
 
     bool hasPrevious() override {
-        return history.size() > 0;
+        return !history.empty();
     }
 
     Song* previous() override {
@@ -61,6 +65,7 @@ public:
 
         Song* song = history.top();
         history.pop();
+        remainingSongs.push_back(song);
         return song;
     }
 };

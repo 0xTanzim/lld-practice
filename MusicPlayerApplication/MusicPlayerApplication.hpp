@@ -11,6 +11,12 @@ private:
     MusicPlayerApplication() {}
 
 public:
+    ~MusicPlayerApplication() {
+        for (Song* song : songLibrary) {
+            delete song;
+        }
+    }
+
     static MusicPlayerApplication* getInstance() {
         if (!instance) {
             instance = new MusicPlayerApplication();

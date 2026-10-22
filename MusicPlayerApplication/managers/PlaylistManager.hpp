@@ -19,6 +19,12 @@ public:
         return instance;
     }
 
+    ~PlaylistManager() {
+        for (auto& [name, playlist] : playlists) {
+            delete playlist;
+        }
+    }
+
     void createPlaylist(const string& name) {
         if (playlists.count(name)) {
             throw runtime_error("Playlist \"" + name + "\" already exists.");

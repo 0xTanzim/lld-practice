@@ -13,6 +13,10 @@ public:
         headphonesApi = api;
     }
 
+    ~HeadphonesAdapter() override {
+        delete headphonesApi;
+    }
+
     void playAudio(Song* song) override {
         string payload = song->getTitle() + " by " + song->getArtist();
         headphonesApi->playSoundViaJack(payload);

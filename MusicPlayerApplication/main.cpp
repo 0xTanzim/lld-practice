@@ -6,7 +6,6 @@ int main() {
     try {
         auto application = MusicPlayerApplication::getInstance();
 
-        // Populate library — Bollywood
         application->createSongInLibrary("Kesariya",  "Arijit Singh",  "/music/kesariya.mp3");
         application->createSongInLibrary("Chaiyya Chaiyya",   "Sukhwinder Singh",  "/music/chaiyya_chaiyya.mp3");
         application->createSongInLibrary("Tum Hi Ho",  "Arijit Singh",  "/music/tum_hi_ho.mp3");
@@ -20,7 +19,6 @@ int main() {
         application->createSongInLibrary("Sab Tera",  "Armaan Malik",  "/music/sab_tera.mp3");
         application->createSongInLibrary("Zara Zara",  "Armaan Malik",  "/music/zara_zara.mp3");
 
-        // Populate library — International
         application->createSongInLibrary("Faded",  "Alan Walker",  "/music/faded.mp3");
         application->createSongInLibrary("On My Way",  "Alan Walker",  "/music/on_my_way.mp3");
         application->createSongInLibrary("Alone",  "Alan Walker",  "/music/alone.mp3");
@@ -30,7 +28,6 @@ int main() {
         application->createSongInLibrary("Believer",  "Imagine Dragons",  "/music/believer.mp3");
         application->createSongInLibrary("Despacito",  "Luis Fonsi",  "/music/despacito.mp3");
 
-        // Create playlists and add songs
         application->createPlaylist("Bollywood Vibes");
         application->addSongToPlaylist("Bollywood Vibes", "Kesariya");
         application->addSongToPlaylist("Bollywood Vibes", "Chaiyya Chaiyya");
@@ -50,13 +47,11 @@ int main() {
         application->addSongToPlaylist("Global Hits", "Believer");
         application->addSongToPlaylist("Global Hits", "Despacito");
 
-        // Connect device
         application->connectAudioDevice(DeviceType::BLUETOOTH);
 
-        //Play/pause a single song
         application->playSingleSong("Zinda");
         application->pauseCurrentSong("Zinda");
-        application->playSingleSong("Zinda");  // resume
+        application->playSingleSong("Zinda");
 
         cout << "\n-- Sequential Playback --\n";
         application->selectPlayStrategy(PlayStrategyType::SEQUENTIAL);
@@ -91,5 +86,12 @@ int main() {
     } catch (const exception& error) {
         cerr << "Error: " << error.what() << endl;
     }
+
+    delete StrategyManager::getInstance();
+    delete DeviceManager::getInstance();
+    delete PlaylistManager::getInstance();
+    delete MusicPlayerFacade::getInstance();
+    delete MusicPlayerApplication::getInstance();
+
     return 0;
 }

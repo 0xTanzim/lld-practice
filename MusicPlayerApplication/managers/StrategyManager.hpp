@@ -26,6 +26,12 @@ public:
         }
         return instance;
     }
+    ~StrategyManager() {
+        delete sequentialStrategy;
+        delete randomStrategy;
+        delete customQueueStrategy;
+    }
+
     PlayStrategy* getStrategy(PlayStrategyType type) {
         if (type == PlayStrategyType::SEQUENTIAL) {
             return sequentialStrategy;
