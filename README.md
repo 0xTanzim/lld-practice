@@ -12,6 +12,7 @@ Hands-on **Low-Level Design** practice in C++26 — one design problem at a time
 | 1 | [`tomato/`](tomato/) | Online food ordering system | Strategy, Abstract Factory, Singleton, Facade | ✅ Done |
 | 2 | [`document-editor/`](document-editor/) | Document rendering + persistence | Composite, Strategy, Facade | ✅ Done |
 | 3 | [`notification-system/`](notification-system/) | Notification pipeline | Decorator, Observer, Strategy, Singleton | ✅ Done |
+| 4 | [`MusicPlayerApplication/`](MusicPlayerApplication/) | Music player — library, playlists, playback | Strategy, Adapter, Factory, Facade, Singleton | ✅ Done |
 
 ## Pattern Lab
 
@@ -32,6 +33,7 @@ lld-practice/
 ├── tomato/                # Full project — own README + build
 ├── document-editor/
 ├── notification-system/
+├── MusicPlayerApplication/
 ├── pattern-lab/           # One-pattern experiments by GoF category
 │   ├── behavioral/
 │   ├── creational/

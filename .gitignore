@@ -19,6 +19,7 @@ tomato/main
 tomato/tomato
 document-editor/main
 notification-system/main
+MusicPlayerApplication/main
 
 # Runtime output
 document.txt
