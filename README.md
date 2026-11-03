@@ -13,6 +13,7 @@ Hands-on **Low-Level Design** practice in C++26 — one design problem at a time
 | 2 | [`document-editor/`](document-editor/) | Document rendering + persistence | Composite, Strategy, Facade | ✅ Done |
 | 3 | [`notification-system/`](notification-system/) | Notification pipeline | Decorator, Observer, Strategy, Singleton | ✅ Done |
 | 4 | [`MusicPlayerApplication/`](MusicPlayerApplication/) | Music player — library, playlists, playback | Strategy, Adapter, Factory, Facade, Singleton | ✅ Done |
+| 5 | [`payment-gateway/`](payment-gateway/) | Multi-rail payments, retry proxy, subscriptions | Template Method, Strategy, Proxy, Factory, Observer, State, Singleton | ✅ Done |
 
 ## Pattern Lab
 
@@ -34,6 +35,7 @@ lld-practice/
 ├── document-editor/
 ├── notification-system/
 ├── MusicPlayerApplication/
+├── payment-gateway/       # Multi-rail payments, retries, subscriptions
 ├── pattern-lab/           # One-pattern experiments by GoF category
 │   ├── behavioral/
 │   ├── creational/

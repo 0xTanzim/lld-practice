@@ -20,6 +20,7 @@ tomato/tomato
 document-editor/main
 notification-system/main
 MusicPlayerApplication/main
+payment-gateway/main
 
 # Runtime output
 document.txt
