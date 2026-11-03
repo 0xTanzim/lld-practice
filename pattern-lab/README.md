@@ -2,7 +2,7 @@
 
 One pattern = one file. Learn a pattern → code it here → run it. Grows with every pattern learned, grouped by GoF category.
 
-**Total patterns learned: 1**
+**Total patterns learned: 5**
 
 ## Index
 
@@ -11,6 +11,8 @@ One pattern = one file. Learn a pattern → code it here → run it. Grows with 
 | Pattern | File |
 |---|---|
 | Command | [`behavioral/command.cpp`](behavioral/command.cpp) |
+| Template Method | [`behavioral/template_method.cpp`](behavioral/template_method.cpp) |
+| Chain of Responsibility | [`behavioral/chain_of_responsibility.cpp`](behavioral/chain_of_responsibility.cpp) |
 
 ### Creational
 
@@ -22,12 +24,16 @@ One pattern = one file. Learn a pattern → code it here → run it. Grows with 
 
 | Pattern | File |
 |---|---|
-| — | _none yet_ |
+| Composite | [`structural/composite.cpp`](structural/composite.cpp) |
+| Proxy — Virtual (lazy load) | [`structural/proxy/virtual_proxy.cpp`](structural/proxy/virtual_proxy.cpp) |
+| Proxy — Remote (network stand-in) | [`structural/proxy/remote_proxy.cpp`](structural/proxy/remote_proxy.cpp) |
+| Proxy — Protection (access control) | [`structural/proxy/protection_proxy.cpp`](structural/proxy/protection_proxy.cpp) |
 
 ## Build & Run
 
 ```bash
-g++ -std=c++26 -Wall -o behavioral/command behavioral/command.cpp && ./behavioral/command
+# one pattern
+g++ -std=c++26 -Wall -o structural/proxy structural/proxy.cpp && ./structural/proxy
 ```
 
 Binaries stay untracked — `.gitignore` keeps only `.cpp` and `.md` inside `pattern-lab/`.
