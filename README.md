@@ -14,6 +14,7 @@ Hands-on **Low-Level Design** practice in C++26 — one design problem at a time
 | 3 | [`notification-system/`](notification-system/) | Notification pipeline | Decorator, Observer, Strategy, Singleton | ✅ Done |
 | 4 | [`MusicPlayerApplication/`](MusicPlayerApplication/) | Music player — library, playlists, playback | Strategy, Adapter, Factory, Facade, Singleton | ✅ Done |
 | 5 | [`payment-gateway/`](payment-gateway/) | Multi-rail payments, retry proxy, subscriptions | Template Method, Strategy, Proxy, Factory, Observer, State, Singleton | ✅ Done |
+| 6 | [`coupon-engine/`](coupon-engine/) | Shopping cart — stacked coupons, cart price ownership | Chain of Responsibility, Strategy, Template Method, Factory, Facade | ✅ Done |
 
 ## Pattern Lab
 
@@ -36,6 +37,7 @@ lld-practice/
 ├── notification-system/
 ├── MusicPlayerApplication/
 ├── payment-gateway/       # Multi-rail payments, retries, subscriptions
+├── coupon-engine/         # Coupon chain, cart price ownership, receipts
 ├── pattern-lab/           # One-pattern experiments by GoF category
 │   ├── behavioral/
 │   ├── creational/

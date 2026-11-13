@@ -21,6 +21,7 @@ document-editor/main
 notification-system/main
 MusicPlayerApplication/main
 payment-gateway/main
+coupon-engine/main
 
 # Runtime output
 document.txt
