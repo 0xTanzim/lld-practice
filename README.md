@@ -15,6 +15,7 @@ Hands-on **Low-Level Design** practice in C++26 — one design problem at a time
 | 4 | [`MusicPlayerApplication/`](MusicPlayerApplication/) | Music player — library, playlists, playback | Strategy, Adapter, Factory, Facade, Singleton | ✅ Done |
 | 5 | [`payment-gateway/`](payment-gateway/) | Multi-rail payments, retry proxy, subscriptions | Template Method, Strategy, Proxy, Factory, Observer, State, Singleton | ✅ Done |
 | 6 | [`coupon-engine/`](coupon-engine/) | Shopping cart — stacked coupons, cart price ownership | Chain of Responsibility, Strategy, Template Method, Factory, Facade | ✅ Done |
+| 7 | [`quick-commerce/`](quick-commerce/) | Dark-store order fulfilment — split allocation, riders, payment | Strategy, Facade, Template Method, Factory | ✅ Done |
 
 ## Pattern Lab
 
@@ -38,6 +39,7 @@ lld-practice/
 ├── MusicPlayerApplication/
 ├── payment-gateway/       # Multi-rail payments, retries, subscriptions
 ├── coupon-engine/         # Coupon chain, cart price ownership, receipts
+├── quick-commerce/        # Dark-store fulfilment, split allocation, riders, payment
 ├── pattern-lab/           # One-pattern experiments by GoF category
 │   ├── behavioral/
 │   ├── creational/

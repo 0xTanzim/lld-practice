@@ -22,6 +22,7 @@ notification-system/main
 MusicPlayerApplication/main
 payment-gateway/main
 coupon-engine/main
+quick-commerce/main
 
 # Runtime output
 document.txt
