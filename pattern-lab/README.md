@@ -2,7 +2,7 @@
 
 One pattern = one file. Learn a pattern → code it here → run it. Grows with every pattern learned, grouped by GoF category.
 
-**Total patterns learned: 5**
+**Total patterns learned: 6**
 
 ## Index
 
@@ -24,6 +24,7 @@ One pattern = one file. Learn a pattern → code it here → run it. Grows with 
 
 | Pattern | File |
 |---|---|
+| Bridge | [`structural/bridge.cpp`](structural/bridge.cpp) |
 | Composite | [`structural/composite.cpp`](structural/composite.cpp) |
 | Proxy — Virtual (lazy load) | [`structural/proxy/virtual_proxy.cpp`](structural/proxy/virtual_proxy.cpp) |
 | Proxy — Remote (network stand-in) | [`structural/proxy/remote_proxy.cpp`](structural/proxy/remote_proxy.cpp) |
