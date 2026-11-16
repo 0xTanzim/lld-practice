@@ -2,7 +2,7 @@
 
 One pattern = one file. Learn a pattern → code it here → run it. Grows with every pattern learned, grouped by GoF category.
 
-**Total patterns learned: 6**
+**Total patterns learned: 9**
 
 ## Index
 
@@ -18,7 +18,9 @@ One pattern = one file. Learn a pattern → code it here → run it. Grows with 
 
 | Pattern | File |
 |---|---|
-| — | _none yet_ |
+| Factory Method | [`creational/factory_method.cpp`](creational/factory_method.cpp) |
+| Builder | [`creational/builder.cpp`](creational/builder.cpp) |
+| Prototype | [`creational/prototype.cpp`](creational/prototype.cpp) |
 
 ### Structural
 
