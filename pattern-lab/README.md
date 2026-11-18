@@ -19,7 +19,9 @@ One pattern = one file. Learn a pattern → code it here → run it. Grows with 
 | Pattern | File |
 |---|---|
 | Factory Method | [`creational/factory_method.cpp`](creational/factory_method.cpp) |
-| Builder | [`creational/builder.cpp`](creational/builder.cpp) |
+| Builder — without it (the problem) | [`creational/builder/01_without_builder.cpp`](creational/builder/01_without_builder.cpp) |
+| Builder — builder + director | [`creational/builder/02_builder_with_director.cpp`](creational/builder/02_builder_with_director.cpp) |
+| Builder — step builder (order in the type) | [`creational/builder/03_step_builder.cpp`](creational/builder/03_step_builder.cpp) |
 | Prototype | [`creational/prototype.cpp`](creational/prototype.cpp) |
 
 ### Structural
@@ -41,10 +43,12 @@ g++ -std=c++26 -Wall -o structural/proxy structural/proxy.cpp && ./structural/pr
 
 Binaries stay untracked — `.gitignore` keeps only `.cpp` and `.md` inside `pattern-lab/`.
 
+A pattern with several variants gets its own folder — see `structural/proxy/` (virtual, remote, protection) and `creational/builder/` (without, builder, step builder). The pattern is counted once.
+
 ## Adding a Pattern
 
 1. Pick category folder: `behavioral/` | `creational/` | `structural/`
-2. Create `<pattern>.cpp` — self-contained: interfaces + concrete classes + `main()` demo
+2. Create `<pattern>.cpp` — self-contained: interfaces + concrete classes + `main()` demo. More than one variant → `<pattern>/01_….cpp`, `<pattern>/02_….cpp`
 3. Add row to that category's table, bump the total count
 
 ## Promotion Path

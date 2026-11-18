@@ -25,7 +25,7 @@ Single-pattern scratchpad, grouped by GoF category — grows with every pattern 
 | Category | Learned |
 |---|---|
 | Behavioral | [Command](pattern-lab/behavioral/command.cpp), [Template Method](pattern-lab/behavioral/template_method.cpp), [Chain of Responsibility](pattern-lab/behavioral/chain_of_responsibility.cpp) |
-| Creational | [Factory Method](pattern-lab/creational/factory_method.cpp), [Builder](pattern-lab/creational/builder.cpp), [Prototype](pattern-lab/creational/prototype.cpp) |
+| Creational | [Factory Method](pattern-lab/creational/factory_method.cpp), [Builder](pattern-lab/creational/builder/02_builder_with_director.cpp), [Prototype](pattern-lab/creational/prototype.cpp) |
 | Structural | [Bridge](pattern-lab/structural/bridge.cpp), [Composite](pattern-lab/structural/composite.cpp), [Proxy](pattern-lab/structural/proxy/virtual_proxy.cpp) |
 
 Full index: [`pattern-lab/README.md`](pattern-lab/README.md)
