@@ -2,7 +2,7 @@
 
 One pattern = one file. Learn a pattern → code it here → run it. Grows with every pattern learned, grouped by GoF category.
 
-**Total patterns learned: 9**
+**Total patterns learned: 10**
 
 ## Index
 
@@ -13,6 +13,7 @@ One pattern = one file. Learn a pattern → code it here → run it. Grows with 
 | Command | [`behavioral/command.cpp`](behavioral/command.cpp) |
 | Template Method | [`behavioral/template_method.cpp`](behavioral/template_method.cpp) |
 | Chain of Responsibility | [`behavioral/chain_of_responsibility.cpp`](behavioral/chain_of_responsibility.cpp) |
+| Iterator | [`behavioral/iterator.cpp`](behavioral/iterator.cpp) |
 
 ### Creational
 
