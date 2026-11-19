@@ -2,7 +2,7 @@
 
 One pattern = one file. Learn a pattern → code it here → run it. Grows with every pattern learned, grouped by GoF category.
 
-**Total patterns learned: 10**
+**Total patterns learned: 11**
 
 ## Index
 
@@ -31,6 +31,8 @@ One pattern = one file. Learn a pattern → code it here → run it. Grows with 
 |---|---|
 | Bridge | [`structural/bridge.cpp`](structural/bridge.cpp) |
 | Composite | [`structural/composite.cpp`](structural/composite.cpp) |
+| Flyweight — without it (the problem) | [`structural/flyweight/01_without_flyweight.cpp`](structural/flyweight/01_without_flyweight.cpp) |
+| Flyweight — with it (shared intrinsic state) | [`structural/flyweight/02_with_flyweight.cpp`](structural/flyweight/02_with_flyweight.cpp) |
 | Proxy — Virtual (lazy load) | [`structural/proxy/virtual_proxy.cpp`](structural/proxy/virtual_proxy.cpp) |
 | Proxy — Remote (network stand-in) | [`structural/proxy/remote_proxy.cpp`](structural/proxy/remote_proxy.cpp) |
 | Proxy — Protection (access control) | [`structural/proxy/protection_proxy.cpp`](structural/proxy/protection_proxy.cpp) |
