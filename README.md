@@ -17,6 +17,7 @@ Hands-on **Low-Level Design** practice in C++26 — one design problem at a time
 | 6 | [`coupon-engine/`](coupon-engine/) | Shopping cart — stacked coupons, cart price ownership | Chain of Responsibility, Strategy, Template Method, Factory, Facade | ✅ Done |
 | 7 | [`quick-commerce/`](quick-commerce/) | Dark-store order fulfilment — split allocation, riders, payment | Strategy, Facade, Template Method, Factory | ✅ Done |
 | 8 | [`dating-app/`](dating-app/) | Dating app — matching, multi-channel notifications, chat | Facade, Observer, Strategy, Factory | ✅ Done |
+| 9 | [`splitwise/`](splitwise/) | Shared expenses — group splits, settlement, debt simplification | Facade, Observer, Strategy, Factory | ✅ Done |
 
 ## Pattern Lab
 
@@ -42,6 +43,7 @@ lld-practice/
 ├── coupon-engine/         # Coupon chain, cart price ownership, receipts
 ├── quick-commerce/        # Dark-store fulfilment, split allocation, riders, payment
 ├── dating-app/            # Matching rules, multi-channel notifications, chat
+├── splitwise/             # Group splits, settlement, debt simplification
 ├── pattern-lab/           # One-pattern experiments by GoF category
 │   ├── behavioral/
 │   ├── creational/

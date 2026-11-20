@@ -24,6 +24,7 @@ payment-gateway/main
 coupon-engine/main
 quick-commerce/main
 dating-app/main
+splitwise/main
 
 # Runtime output
 document.txt
