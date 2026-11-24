@@ -19,6 +19,9 @@ using namespace std;
 // It is also a deep copy. The channels live inside the campaign, not behind a
 // shared pointer, so the copy owns its own budget figures. Editing the clone
 // must never move the template.
+//
+// 02_npc_clones.cpp takes the other reason to clone: not an unknown class name,
+// but the price of building the object at all.
 
 // One channel's settings inside a campaign. Value type on purpose: any
 // prototype clone copies these, and no two campaigns can end up sharing one.

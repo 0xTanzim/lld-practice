@@ -2,7 +2,7 @@
 
 One pattern = one file. Learn a pattern → code it here → run it. Grows with every pattern learned, grouped by GoF category.
 
-**Total patterns learned: 12**
+**Total patterns learned: 15**
 
 ## Index
 
@@ -15,6 +15,10 @@ One pattern = one file. Learn a pattern → code it here → run it. Grows with 
 | Chain of Responsibility | [`behavioral/chain_of_responsibility.cpp`](behavioral/chain_of_responsibility.cpp) |
 | Iterator | [`behavioral/iterator.cpp`](behavioral/iterator.cpp) |
 | State | [`behavioral/state.cpp`](behavioral/state.cpp) |
+| Mediator — without it (the problem) | [`behavioral/mediator/01_without_mediator.cpp`](behavioral/mediator/01_without_mediator.cpp) |
+| Mediator — with it (one room owns routing) | [`behavioral/mediator/02_with_mediator.cpp`](behavioral/mediator/02_with_mediator.cpp) |
+| Visitor | [`behavioral/visitor.cpp`](behavioral/visitor.cpp) |
+| Memento | [`behavioral/memento.cpp`](behavioral/memento.cpp) |
 
 ### Creational
 
@@ -24,7 +28,8 @@ One pattern = one file. Learn a pattern → code it here → run it. Grows with 
 | Builder — without it (the problem) | [`creational/builder/01_without_builder.cpp`](creational/builder/01_without_builder.cpp) |
 | Builder — builder + director | [`creational/builder/02_builder_with_director.cpp`](creational/builder/02_builder_with_director.cpp) |
 | Builder — step builder (order in the type) | [`creational/builder/03_step_builder.cpp`](creational/builder/03_step_builder.cpp) |
-| Prototype | [`creational/prototype.cpp`](creational/prototype.cpp) |
+| Prototype — clone through a base pointer, with a registry | [`creational/prototype/01_campaign_registry.cpp`](creational/prototype/01_campaign_registry.cpp) |
+| Prototype — build once, clone the variants (cost) | [`creational/prototype/02_npc_clones.cpp`](creational/prototype/02_npc_clones.cpp) |
 
 ### Structural
 
@@ -42,12 +47,20 @@ One pattern = one file. Learn a pattern → code it here → run it. Grows with 
 
 ```bash
 # one pattern
-g++ -std=c++26 -Wall -o structural/proxy structural/proxy.cpp && ./structural/proxy
+g++ -std=c++26 -Wall -Wextra -o iterator behavioral/iterator.cpp && ./iterator
 ```
 
 Binaries stay untracked — `.gitignore` keeps only `.cpp` and `.md` inside `pattern-lab/`.
 
-A pattern with several variants gets its own folder — see `structural/proxy/` (virtual, remote, protection) and `creational/builder/` (without, builder, step builder). The pattern is counted once.
+A pattern with several variants gets its own folder, and is counted once:
+
+| Folder | Variants |
+|---|---|
+| `creational/builder/` | without, builder + director, step builder |
+| `creational/prototype/` | registry, npc |
+| `structural/flyweight/` | without, with |
+| `structural/proxy/` | virtual, remote, protection |
+| `behavioral/mediator/` | without, with |
 
 ## Adding a Pattern
 

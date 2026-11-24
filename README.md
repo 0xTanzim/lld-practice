@@ -25,8 +25,8 @@ Single-pattern scratchpad, grouped by GoF category — grows with every pattern 
 
 | Category | Learned |
 |---|---|
-| Behavioral | [Command](pattern-lab/behavioral/command.cpp), [Template Method](pattern-lab/behavioral/template_method.cpp), [Chain of Responsibility](pattern-lab/behavioral/chain_of_responsibility.cpp), [Iterator](pattern-lab/behavioral/iterator.cpp) |
-| Creational | [Factory Method](pattern-lab/creational/factory_method.cpp), [Builder](pattern-lab/creational/builder/02_builder_with_director.cpp), [Prototype](pattern-lab/creational/prototype.cpp) |
+| Behavioral | [Command](pattern-lab/behavioral/command.cpp), [Template Method](pattern-lab/behavioral/template_method.cpp), [Chain of Responsibility](pattern-lab/behavioral/chain_of_responsibility.cpp), [Iterator](pattern-lab/behavioral/iterator.cpp), [State](pattern-lab/behavioral/state.cpp), [Mediator](pattern-lab/behavioral/mediator/02_with_mediator.cpp), [Visitor](pattern-lab/behavioral/visitor.cpp), [Memento](pattern-lab/behavioral/memento.cpp) |
+| Creational | [Factory Method](pattern-lab/creational/factory_method.cpp), [Builder](pattern-lab/creational/builder/02_builder_with_director.cpp), [Prototype](pattern-lab/creational/prototype/01_campaign_registry.cpp) |
 | Structural | [Bridge](pattern-lab/structural/bridge.cpp), [Composite](pattern-lab/structural/composite.cpp), [Flyweight](pattern-lab/structural/flyweight/02_with_flyweight.cpp), [Proxy](pattern-lab/structural/proxy/virtual_proxy.cpp) |
 
 Full index: [`pattern-lab/README.md`](pattern-lab/README.md)
@@ -56,7 +56,7 @@ Each project is self-contained: own `README.md`, own build instructions. Details
 
 ## Conventions
 
-- **C++26** — `g++ -std=c++26 -Wall`
+- **C++26** — `g++ -std=c++26 -Wall -Wextra`
 - No verbose WHAT-comments — code reads as documentation
 - No magic values — constants centralized
 - Fail fast, explicit errors, no silent failures
